@@ -28,8 +28,8 @@ dependencies {
     // Web REST API
     implementation 'org.springframework.boot:spring-boot-starter-web'
     
-    // Spring AI OpenAI Starter (Lab 1.1 - 1.6 & Chapter 2)
-    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+    // Spring AI OpenAI Starter
+    implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter'
     
     // Spring Retry & AOP untuk Self-Evaluation saat Runtime (Lab 2.3 Listing 2.2)
     implementation 'org.springframework.retry:spring-retry'
@@ -41,6 +41,8 @@ dependencies {
     // Testing Dependencies (Lab 1.4 WireMock & Lab 2.1-2.2 Evaluator)
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.wiremock.integrations:wiremock-spring-boot:3.9.0'
+    testImplementation 'org.apache.httpcomponents.client5:httpclient5:5.4'
+    testImplementation 'org.apache.httpcomponents.core5:httpcore5:5.3'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 

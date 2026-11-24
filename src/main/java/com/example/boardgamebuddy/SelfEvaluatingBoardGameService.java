@@ -1,9 +1,9 @@
 package com.example.boardgamebuddy;
 
 import org.springframework.ai.chat.client.ChatClient;
-import org.springframework.ai.chat.evaluation.RelevancyEvaluator;
-import org.springframework.ai.chat.prompt.ChatOptions;
+import org.springframework.ai.chat.prompt.ChatOptionsBuilder;
 import org.springframework.ai.evaluation.EvaluationRequest;
+import org.springframework.ai.evaluation.RelevancyEvaluator;
 import org.springframework.retry.annotation.Recover;
 import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
@@ -18,8 +18,8 @@ public class SelfEvaluatingBoardGameService implements BoardGameService {
     private final RelevancyEvaluator evaluator;
 
     public SelfEvaluatingBoardGameService(ChatClient.Builder chatClientBuilder) {
-        var chatOptions = ChatOptions.builder()
-                .model("gpt-4o-mini")
+        var chatOptions = ChatOptionsBuilder.builder()
+                .withModel("gpt-4o-mini")
                 .build();
         this.chatClient = chatClientBuilder
                 .defaultOptions(chatOptions)
