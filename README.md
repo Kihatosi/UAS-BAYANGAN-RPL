@@ -1,4 +1,4 @@
-# Board Game Buddy 🎲 (Spring AI in Action)
+# Board Game Buddy  (Spring AI in Action)
 
 Repositori praktikum **Spring AI in Action (by Craig Walls)** - Chapter 1 & Chapter 2.
 Mata Kuliah: **Rekayasa Perangkat Lunak Lanjut**  
@@ -8,7 +8,7 @@ Program Studi: **Teknik Informatika - FST UIN Syarif Hidayatullah Jakarta (2026)
 
 ---
 
-## 📋 Daftar Lab & Fitur yang Diimplementasikan
+##  Daftar Lab & Fitur yang Diimplementasikan
 
 ### BAB II: CHAPTER 1 - Getting Started with Spring AI
 - **Lab 1.1**: Inisialisasi Project Spring Boot dengan Spring Initializr (Gradle Groovy, Java 21, Spring Boot, Spring AI BOM 1.0.0-M3/1.0.1).
@@ -26,7 +26,7 @@ Program Studi: **Teknik Informatika - FST UIN Syarif Hidayatullah Jakarta (2026)
 
 ---
 
-## 🚀 Cara Menjalankan Aplikasi
+##  Cara Menjalankan Aplikasi
 
 ### 1. Menentukan Environment Variable API Key
 Sebelum menjalankan aplikasi dengan OpenAI, atur environment variable:
