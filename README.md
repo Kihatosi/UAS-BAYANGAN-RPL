@@ -1,4 +1,4 @@
-# Board Game Buddy  (Spring AI in Action)
+# Board Game Buddy (Spring AI in Action)
 
 Repositori praktikum **Spring AI in Action (by Craig Walls)** - Chapter 1 & Chapter 2.
 Mata Kuliah: **Rekayasa Perangkat Lunak Lanjut**  
@@ -8,7 +8,7 @@ Program Studi: **Teknik Informatika - FST UIN Syarif Hidayatullah Jakarta (2026)
 
 ---
 
-##  Daftar Lab & Fitur yang Diimplementasikan
+## Daftar Lab & Fitur yang Diimplementasikan
 
 ### BAB II: CHAPTER 1 - Getting Started with Spring AI
 - **Lab 1.1**: Inisialisasi Project Spring Boot dengan Spring Initializr (Gradle Groovy, Java 21, Spring Boot, Spring AI BOM 1.0.0-M3/1.0.1).
@@ -26,7 +26,7 @@ Program Studi: **Teknik Informatika - FST UIN Syarif Hidayatullah Jakarta (2026)
 
 ---
 
-##  Cara Menjalankan Aplikasi
+## Cara Menjalankan Aplikasi
 
 ### 1. Menentukan Environment Variable API Key
 Sebelum menjalankan aplikasi dengan OpenAI, atur environment variable:
@@ -67,9 +67,16 @@ curl -X POST http://localhost:8080/ask \
   -d "{\"question\": \"Why is the sky blue?\"}"
 ```
 
+### 5. Mengakses Halaman Web Chat UI
+Setelah server aktif di port 8080, buka browser pada alamat:
+```
+http://localhost:8080/
+```
+Antarmuka web menyajikan interaksi chat berbasis Spring AI untuk demonstrasi interaktif.
+
 ---
 
-## 🏛️ Arsitektur & Class Diagram
+## Arsitektur & Class Diagram
 
 ```
 +------------------------------------+
@@ -96,7 +103,7 @@ curl -X POST http://localhost:8080/ask \
 
 ---
 
-## 📌 Riwayat Commit (Versioning)
+## Riwayat Commit (Versioning)
 1. `init: project Spring Initializr` (Lab 1.1)
 2. `feat: BoardGameService, controller, API key config` (Lab 1.2 & 1.3)
 3. `test: WireMock` (Lab 1.4)
@@ -105,3 +112,15 @@ curl -X POST http://localhost:8080/ask \
 6. `test: FactCheckingEvaluator` (Lab 2.2)
 7. `feat: self-evaluating service + retry` (Lab 2.3)
 8. `docs: update README and comprehensive documentation`
+9. `chore: include full gradle wrapper binaries`
+10. `chore: ignore IDE bin directory`
+11. `fix: resolve Spring AI 1.0.0-M3 packages and WireMock httpclient5 compatibility`
+12. `feat: add graceful fallback in SpringAiBoardGameService for offline demo`
+13. `feat: add interactive web chat UI for Board Game Buddy`
+14. `feat: smart dynamic response fallback for board game questions`
+15. `feat: comprehensive contextual responses for natural demo interactions`
+
+Tag Rilis:
+- `v1.0-chapter1`: Batas akhir pengerjaan Chapter 1
+- `v1.0-chapter2`: Batas akhir pengerjaan Chapter 2
+- `main (HEAD)`: Versi akhir lengkap dengan integrasi web UI dan penyesuaian dependensi
