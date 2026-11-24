@@ -30,8 +30,9 @@ out/
 /nbproject/load-into-ext-browser.xml
 /nbproject/private/
 
-### VS Code ###
-.vscode/
+### Eclipse / VS Code binaries ###
+bin/
+
 
 ### OS & Secrets ###
 .DS_Store
