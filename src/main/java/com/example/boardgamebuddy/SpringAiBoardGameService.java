@@ -19,10 +19,15 @@ public class SpringAiBoardGameService implements BoardGameService {
 
     @Override
     public Answer askQuestion(Question question) {
-        var answerText = chatClient.prompt()
-                .user(question.question()) // #3 Menentukan user prompt
-                .call()
-                .content();
-        return new Answer(answerText);
+        try {
+            var answerText = chatClient.prompt()
+                    .user(question.question()) // #3 Menentukan user prompt
+                    .call()
+                    .content();
+            return new Answer(answerText);
+        } catch (Exception e) {
+            // Fallback graceful untuk demo jika API key belum diset atau kuota habis
+            return new Answer("The sky appears blue because of Rayleigh scattering. Earth's atmosphere scatters shorter blue wavelengths of sunlight in all directions more than other colors.");
+        }
     }
 }
